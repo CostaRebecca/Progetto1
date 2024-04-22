@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+
+body {
+    background-color: #262626;
+}
+
+.logo {
+    background-color: #262626;
+
+}
+
+.theeia {
+    width: 18rem;
+    height: 1.7rem;
+}
+
+.background-image-logo {
+    background-image: url("/img/COPERTINA.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    width: 100%;
+    margin: 0px;
+}
+
+/*.background-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+.aboutMe {
+    font-size: 0.9em;
+}
+
+
+.marquee {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    --offset: 20vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+}
+
+.marquee__inner {
+    width: max-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 15s linear infinite;
+    animation-play-state: paused;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.marquee span {
+    font-size: 1.3rem;
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+/* .marquee:hover .marquee__inner { */
+
+.marquee .marquee__inner {
+    animation-play-state: running;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+}
+
+.me {
+    color: aliceblue;
+}
+
+figcaption {
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    font-size: .8em;
+    -webkit-transition: opacity .7s ease-in-out;
+    -moz-transition: opacity .7s ease-in-out;
+    -o-transition: opacity .7s ease-in-out;
+    transition: opacity .7s ease-in-out;
+    color: #fff;
+    opacity: 0;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.yugen {
+    position: absolute;
+    left: 50%;
+    bottom: 0.5%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    font-size: .8em;
+    -webkit-transition: opacity .7s ease-in-out;
+    -moz-transition: opacity .7s ease-in-out;
+    -o-transition: opacity .7s ease-in-out;
+    transition: opacity .7s ease-in-out;
+    color: #fff;
+    opacity: 0;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+figure:hover figcaption {
+    opacity: 1;
+
+}
+
+
+figure:hover img {
+    opacity: 0.2;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+
+
+p,
+h2,
+li {
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
